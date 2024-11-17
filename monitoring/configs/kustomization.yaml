@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: monitoring
 resources:
   - podmonitor.yaml
-  - ../controllers/cert-manager/cluster-issuers.yaml
+  - cluster-issuer.yaml
 configMapGenerator:
   - name: flux-grafana-dashboards
     files:
