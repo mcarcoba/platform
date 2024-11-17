@@ -5,3 +5,13 @@ metadata:
 spec:
   interval: 24h
   url: https://charts.jetstack.io
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: cert-manager-crds
+spec:
+  interval: 1m0s
+  url: https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+  ref:
+    branch: main
