@@ -33,7 +33,7 @@ jobs:
           --ignore-paths="clusters/**/flux-system/"
           flux create kustomization flux-system \
           --source=flux-system \
-          --path=./clusters/test
+          --path=./clusters/mcarcoba
       - name: Verify cluster reconciliation
         run: |
           kubectl -n flux-system wait kustomization/monitoring-controllers --for=condition=ready --timeout=10m

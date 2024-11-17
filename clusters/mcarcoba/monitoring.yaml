@@ -5,7 +5,7 @@ metadata:
   name: monitoring-controllers
   namespace: flux-system
 spec:
-  interval: 1h
+  interval: 1m
   retryInterval: 2m
   timeout: 10m
   prune: true
@@ -23,7 +23,7 @@ metadata:
 spec:
   dependsOn:
     - name: monitoring-controllers
-  interval: 1h
+  interval: 1m
   retryInterval: 2m
   timeout: 5m
   prune: true
