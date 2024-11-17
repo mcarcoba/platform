@@ -4,6 +4,7 @@ namespace: monitoring
 resources:
   - podmonitor.yaml
   - cluster-issuer.yaml
+  - certificate.yaml
 configMapGenerator:
   - name: flux-grafana-dashboards
     files:
