@@ -1,10 +1,5 @@
-# flux2-monitoring-example
-
-This repository is an example of how to make use of
-[kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
-and
-[loki-stack](https://github.com/grafana/helm-charts/tree/main/charts/loki-stack)
-to monitor Flux.
+# Mcarcoba Platform
+this repository has all the platform definition
 
 Components:
 
@@ -28,7 +23,7 @@ Create a cluster called `test` with the kind CLI:
 kind create cluster --name test
 ```
 
-### Fork the GitHub repository
+### Connect GitHub repository
 
 In order to follow this guide you'll need a GitHub account and a
 [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
@@ -41,13 +36,6 @@ export GITHUB_TOKEN=<your-token>
 export GITHUB_USER=<your-username>
 ```
 
-Fork this repository on your personal account and clone it locally:
-
-```shell
-git clone https://github.com/${GITHUB_USER}/flux2-monitoring-example.git
-cd flux2-monitoring-example
-```
-
 ### Bootstrap Flux
 
 Install the Flux controllers on the test cluster:
@@ -55,10 +43,10 @@ Install the Flux controllers on the test cluster:
 ```shell
 flux bootstrap github \
     --owner=${GITHUB_USER} \
-    --repository=flux2-monitoring-example \
+    --repository=platform \
     --branch=main \
     --personal \
-    --path=clusters/test
+    --path=clusters/mcarcoba
 ```
 
 Wait for Flux to deploy the monitoring stack with:
