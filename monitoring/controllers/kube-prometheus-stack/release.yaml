@@ -28,6 +28,11 @@ spec:
       enabled: false
     ingress:
       enabled: true
+      hosts: ["grafana.mcarcoba.com"]
+      tls:
+        - secretName: mcarcoba-com-cert
+          hosts:
+            - grafana.mcarcoba.com
     prometheus:
       prometheusSpec:
         retention: 24h
