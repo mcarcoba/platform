@@ -2,11 +2,12 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: mcarcoba-com-cert
-  namespace: default
+  namespace: cert-manager
 spec:
   secretName: mcarcoba-com-cert-secret
   issuerRef:
     name: letsencrypt-stg
     kind: ClusterIssuer
+    namespace: cert-manager
   dnsNames:
     - mcarcoba.com
