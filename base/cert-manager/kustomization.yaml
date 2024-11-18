@@ -5,4 +5,3 @@ resources:
   - namespace.yaml
   - repository.yaml
   - release.yaml # installs the CRDs, respect the order!
-  - cluster-issuer.yaml
