@@ -10,3 +10,4 @@ spec:
     kind: ClusterIssuer
   dnsNames:
     - mcarcoba.com
+    - "*.mcarcoba.com"
