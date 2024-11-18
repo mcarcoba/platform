@@ -33,4 +33,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./monitoring/configs
+  path: ./configs/monitoring
