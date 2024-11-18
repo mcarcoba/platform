@@ -8,6 +8,5 @@ spec:
   issuerRef:
     name: letsencrypt-stg
     kind: ClusterIssuer
-    namespace: cert-manager
   dnsNames:
     - mcarcoba.com
