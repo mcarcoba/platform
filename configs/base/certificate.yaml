@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: mcarcoba-com-cert-secret
   issuerRef:
-    name: letsencrypt-stg
+    name: cloudflare-stg
     kind: ClusterIssuer
   dnsNames:
     - mcarcoba.com
