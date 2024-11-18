@@ -8,6 +8,7 @@ spec:
   issuerRef:
     name: cloudflare-stg
     kind: ClusterIssuer
+  commonName: mcarcoba.com
   dnsNames:
     - mcarcoba.com
     - "*.mcarcoba.com"
