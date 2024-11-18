@@ -33,6 +33,11 @@ spec:
         - secretName: mcarcoba-com-cert
           hosts:
             - mcarcoba.com
+    grafana.ini:
+      server:
+        domain: mcarcoba.com
+        root_url: "https://mcarcoba.com"
+        serve_from_sub_path: true
     prometheus:
       prometheusSpec:
         retention: 24h
