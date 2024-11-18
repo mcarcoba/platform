@@ -33,7 +33,7 @@ spec:
         traefik.ingress.kubernetes.io/router.entrypoints: "web"
 #        traefik.ingress.kubernetes.io/router.middlewares: "default-redirect-to-https@kubernetescrd" TODO
         traefik.ingress.kubernetes.io/router.tls: "true"
-      hosts: ["grafana.mcarcoba.com"]
+      hosts: ["mcarcoba.com"]
       tls:
         - secretName: mcarcoba-com-cert
           hosts:
