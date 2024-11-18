@@ -26,6 +26,8 @@ spec:
   values:
     alertmanager:
       enabled: false
+    ingress:
+      enabled: true
     prometheus:
       prometheusSpec:
         retention: 24h
