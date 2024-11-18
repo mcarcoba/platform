@@ -5,6 +5,8 @@ metadata:
   name: base
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: flux-system
   interval: 1m
   retryInterval: 2m
   timeout: 10m
