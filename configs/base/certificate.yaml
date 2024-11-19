@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: mcarcoba-com-cert-secret
   issuerRef:
-    name: cloudflare-stg
+    name: cloudflare-prod
     kind: ClusterIssuer
   commonName: mcarcoba.com
   dnsNames:
