@@ -27,23 +27,7 @@ spec:
   values:
     alertmanager:
       enabled: false
-    ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "web"
-#        traefik.ingress.kubernetes.io/router.middlewares: "default-redirect-to-https@kubernetescrd" TODO
-        traefik.ingress.kubernetes.io/router.tls: "true"
-      hosts: ["mcarcoba.com"]
-      tls:
-        - secretName: mcarcoba-com-cert
-          hosts:
-            - mcarcoba.com
-    grafana.ini:
-      server:
-        domain: mcarcoba.com
-        root_url: "https://mcarcoba.com"
-        serve_from_sub_path: true
+
     prometheus:
       prometheusSpec:
         retention: 24h
@@ -57,4 +41,26 @@ spec:
             app.kubernetes.io/component: monitoring
     grafana:
       defaultDashboardsEnabled: false
-      adminPassword: flux
+      adminPassword: 0penS3same!
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        annotations:
+          kubernetes.io/ingress.class: traefik
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+          cert-manager.io/cluster-issuer: cloudflare-stg
+          #        traefik.ingress.kubernetes.io/router.middlewares: "default-redirect-to-https@kubernetescrd" TODO
+          traefik.ingress.kubernetes.io/router.tls: "true"
+        hosts:
+          - mcarcoba.com
+        paths:
+          - /
+        tls:
+          - secretName: mcarcoba-com-cert
+            hosts:
+              - mcarcoba.com
+      grafana.ini:
+        server:
+          domain: mcarcoba.com
+          root_url: "https://mcarcoba.com"
+          serve_from_sub_path: true
