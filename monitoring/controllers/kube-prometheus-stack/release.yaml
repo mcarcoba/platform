@@ -41,7 +41,7 @@ spec:
             app.kubernetes.io/component: monitoring
     grafana:
       defaultDashboardsEnabled: false
-      adminPassword: 1Novatillo6!
+      adminPassword: "1Novatillo6!"
 #      env:
 #        OAUTH_CLIENT_ID:
 #          valueFrom:
