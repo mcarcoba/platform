@@ -40,20 +40,20 @@ spec:
           matchLabels:
             app.kubernetes.io/component: monitoring
     grafana:
-      env:
-        OAUTH_CLIENT_ID:
-          valueFrom:
-            secretKeyRef:
-              name: grafana-oauth-secret
-              key: client_id
-        OAUTH_CLIENT_SECRET:
-            valueFrom:
-              secretKeyRef:
-                name: grafana-oauth-secret
-                key: client_secret
-
-      assertNoLeakedSecrets: false # TODO remove
       defaultDashboardsEnabled: false
+      adminPassword: ricardo
+#      env:
+#        OAUTH_CLIENT_ID:
+#          valueFrom:
+#            secretKeyRef:
+#              name: grafana-oauth-secret
+#              key: client_id
+#        OAUTH_CLIENT_SECRET:
+#            valueFrom:
+#              secretKeyRef:
+#                name: grafana-oauth-secret
+#                key: client_secret
+      assertNoLeakedSecrets: false # TODO remove
       ingress:
         enabled: true
         ingressClassName: traefik
@@ -77,17 +77,17 @@ spec:
           root_url: "https://grafana.mcarcoba.com/"
           serve_from_sub_path: true
           enable_gzip: true
-        auth.github:
-          enabled: true
-          allow_sign_up: false
-          client_id: "$__env{OAUTH_CLIENT_ID}"
-          client_secret: "$__env{OAUTH_CLIENT_SECRET}"
-          scopes: "user:email,read:org"
-          auth_url: "https://github.com/login/oauth/authorize"
-          token_url: "https://github.com/login/oauth/access_token"
-          api_url: "https://api.github.com/user"
-          team_ids: ""
-          allowed_organizations: "mcarcobaOrg"
+#        auth.github:
+#          enabled: true
+#          allow_sign_up: false
+#          client_id: "$__env{OAUTH_CLIENT_ID}"
+#          client_secret: "$__env{OAUTH_CLIENT_SECRET}"
+#          scopes: "user:email,read:org"
+#          auth_url: "https://github.com/login/oauth/authorize"
+#          token_url: "https://github.com/login/oauth/access_token"
+#          api_url: "https://api.github.com/user"
+#          allowed_domains: grafana.mcarcoba.com
+#          allowed_organizations: "mcarcobaOrg"
 #        auth.google:
 #          enabled: true
 #          name: OAuthProvider
