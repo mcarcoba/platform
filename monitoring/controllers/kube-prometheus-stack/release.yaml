@@ -68,8 +68,16 @@ spec:
           enabled: true
           name: OAuthProvider
           allow_sign_up: false
-          client_id: "1095859816970-ppp0qekl2go9q2m3ifdmagjtvtjcl3ls.apps.googleusercontent.com"
-          client_secret: "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"
+          client_id:
+            valueFrom:
+              secretKeyRef:
+                name: grafana-oauth-secret
+                key: client_id
+          client_secret:
+            valueFrom:
+              secretKeyRef:
+                name: grafana-oauth-secret
+                key: client_secret
           scopes:
             - https://www.googleapis.com/auth/userinfo.profile
             - https://www.googleapis.com/auth/userinfo.email
