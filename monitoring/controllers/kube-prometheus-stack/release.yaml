@@ -43,9 +43,7 @@ spec:
       defaultDashboardsEnabled: false
       adminPassword:
         valueFrom:
-          secretKeyRef:
-            name: grafana-oauth-secret
-            key: client_secret
+          secretKeyRef: 1Novatillo6!
 #      env:
 #        OAUTH_CLIENT_ID:
 #          valueFrom:
