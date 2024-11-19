@@ -4,7 +4,6 @@ namespace: monitoring
 resources:
   - namespace.yaml
   - repository.yaml
-  - middleware.yaml
   - release.yaml
 configMapGenerator:
   - name: flux-kube-state-metrics-config
