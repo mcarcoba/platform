@@ -43,7 +43,7 @@ spec:
       defaultDashboardsEnabled: false
       adminPassword:
         valueFrom:
-          secretKeyRef: 1Novatillo6!
+          secretKeyRef: "1Novatillo6!"
 #      env:
 #        OAUTH_CLIENT_ID:
 #          valueFrom:
