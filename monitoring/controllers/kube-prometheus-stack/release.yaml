@@ -41,7 +41,6 @@ spec:
             app.kubernetes.io/component: monitoring
     grafana:
       defaultDashboardsEnabled: false
-      adminPassword: 0penS3same!
       ingress:
         enabled: true
         ingressClassName: traefik
@@ -49,18 +48,33 @@ spec:
           kubernetes.io/ingress.class: traefik
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           cert-manager.io/cluster-issuer: cloudflare-stg
-          #        traefik.ingress.kubernetes.io/router.middlewares: "default-redirect-to-https@kubernetescrd" TODO
+          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd"
           traefik.ingress.kubernetes.io/router.tls: "true"
         hosts:
-          - mcarcoba.com
+          - grafana.mcarcoba.com
         paths:
           - /
         tls:
           - secretName: mcarcoba-com-cert
             hosts:
-              - mcarcoba.com
+              - grafana.mcarcoba.com
       grafana.ini:
         server:
-          domain: mcarcoba.com
-          root_url: "https://mcarcoba.com"
+          domain: grafana.mcarcoba.com
+          root_url: "https://grafana.mcarcoba.com"
           serve_from_sub_path: true
+          enable_gzip: true
+        auth.google:
+          enabled: true
+          name: OAuthProvider
+          allow_sign_up: false
+          client_id: "1095859816970-ppp0qekl2go9q2m3ifdmagjtvtjcl3ls.apps.googleusercontent.com"
+          client_secret: "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"
+          scopes:
+            - https://www.googleapis.com/auth/userinfo.profile
+            - https://www.googleapis.com/auth/userinfo.email
+          auth_url: "https://accounts.google.com/o/oauth2/auth"
+          token_url: "https://oauth2.googleapis.com/token"
+          api_url: "https://www.googleapis.com/oauth2/v1/userinfo"
+          allowed_domains:
+            - grafana.mcarcoba.com
