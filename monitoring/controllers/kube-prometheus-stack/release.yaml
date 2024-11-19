@@ -41,7 +41,11 @@ spec:
             app.kubernetes.io/component: monitoring
     grafana:
       defaultDashboardsEnabled: false
-      adminPassword: ricardo
+      adminPassword:
+        valueFrom:
+          secretKeyRef:
+            name: grafana-oauth-secret
+            key: client_secret
 #      env:
 #        OAUTH_CLIENT_ID:
 #          valueFrom:
