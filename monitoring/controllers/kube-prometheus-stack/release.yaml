@@ -40,6 +40,7 @@ spec:
           matchLabels:
             app.kubernetes.io/component: monitoring
     grafana:
+      assertNoLeakedSecrets: false
       defaultDashboardsEnabled: false
       ingress:
         enabled: true

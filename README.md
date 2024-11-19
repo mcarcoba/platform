@@ -71,15 +71,9 @@ prometheus-kube-prometheus-stack-prometheus-0               2/2
 
 ### Accessing Grafana
 
-To access Grafana, start port forward in a separate shell:
-
-```shell
-kubectl -n monitoring port-forward svc/kube-prometheus-stack-grafana  3000:80
-```
-
-Navigate to `http://localhost:3000` in your browser and login with user `admin` and password `flux`.
+Navigate to `http://grafana.mcarcoba.com` in your browser and login with user `admin` and password `flux`.
 
 Flux dashboards:
-- [Reconciliation stats](http://localhost:3000/d/flux-cluster/flux-cluster-stats)
-- [Control plane stats](http://localhost:3000/d/flux-control-plane/flux-control-plane)
-- [Control plane logs](http://localhost:3000/d/flux-logs/flux-logs)
+- [Reconciliation stats](http://grafana.mcarcoba.com/d/flux-cluster/flux-cluster-stats)
+- [Control plane stats](http://grafana.mcarcoba.com/d/flux-control-plane/flux-control-plane)
+- [Control plane logs](http://grafana.mcarcoba.com/d/flux-logs/flux-logs)
