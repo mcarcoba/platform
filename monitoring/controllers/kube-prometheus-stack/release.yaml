@@ -62,7 +62,7 @@ spec:
       grafana.ini:
         server:
           domain: grafana.mcarcoba.com
-          root_url: "https://grafana.mcarcoba.com"
+          root_url: "https://grafana.mcarcoba.com/"
           serve_from_sub_path: true
           enable_gzip: true
         auth.google:
