@@ -12,3 +12,8 @@ spec:
   dnsNames:
     - mcarcoba.com
     - "*.mcarcoba.com"
+  isCA: false
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
