@@ -94,7 +94,7 @@ spec:
         auth.google:
           auth.github:
             enabled: true
-            allow_sign_up: true
+            allow_sign_up: false
             client_id: "${OAUTH_CLIENT_ID}"
             client_secret: "${OAUTH_CLIENT_SECRET}"
             scopes: "user:email,read:org"
