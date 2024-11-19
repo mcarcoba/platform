@@ -40,7 +40,19 @@ spec:
           matchLabels:
             app.kubernetes.io/component: monitoring
     grafana:
-      assertNoLeakedSecrets: false
+      env:
+        OAUTH_CLIENT_ID:
+          valueFrom:
+            secretKeyRef:
+              name: grafana-oauth-secret
+              key: client_id
+        OAUTH_CLIENT_SECRET:
+            valueFrom:
+              secretKeyRef:
+                name: grafana-oauth-secret
+                key: client_secret
+
+      assertNoLeakedSecrets: false # TODO remove
       defaultDashboardsEnabled: false
       ingress:
         enabled: true
@@ -69,16 +81,8 @@ spec:
           enabled: true
           name: OAuthProvider
           allow_sign_up: false
-          client_id:
-            valueFrom:
-              secretKeyRef:
-                name: grafana-oauth-secret
-                key: client_id
-          client_secret:
-            valueFrom:
-              secretKeyRef:
-                name: grafana-oauth-secret
-                key: client_secret
+          client_id: "${OAUTH_CLIENT_ID}"
+          client_secret: "${OAUTH_CLIENT_SECRET}"
           scopes:
             - https://www.googleapis.com/auth/userinfo.profile
             - https://www.googleapis.com/auth/userinfo.email
