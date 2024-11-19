@@ -80,8 +80,8 @@ spec:
         auth.github:
           enabled: true
           allow_sign_up: false
-          client_id: "${OAUTH_CLIENT_ID}"
-          client_secret: "${OAUTH_CLIENT_SECRET}"
+          client_id: "$__env{OAUTH_CLIENT_ID}"
+          client_secret: "$__env{OAUTH_CLIENT_SECRET}"
           scopes: "user:email,read:org"
           auth_url: "https://github.com/login/oauth/authorize"
           token_url: "https://github.com/login/oauth/access_token"
