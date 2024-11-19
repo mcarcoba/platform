@@ -1,0 +1,2 @@
+kubectl create secret generic cloudflare-api-token-secret --from-literal=api-token="${CLOUDFLARE_TOKEN}" --namespace=cert-manager # TODO to yaml
+kubectl create secret generic grafana-oauth-secret --from-literal=client_id=${OAUTH_CLIENT_ID} --from-literal=client_secret=${OAUTH_CLIENT_SECRET} --namespace=monitoring --dry-run=client -o yaml | kubectl apply -f -
