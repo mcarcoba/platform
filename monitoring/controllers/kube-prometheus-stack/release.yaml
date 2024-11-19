@@ -102,4 +102,4 @@ spec:
             token_url: "https://github.com/login/oauth/access_token"
             api_url: "https://api.github.com/user"
             team_ids: ""
-            allowed_organizations: "mcarcoba"
+            allowed_organizations: "mcarcobaOrg"
