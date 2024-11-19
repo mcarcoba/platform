@@ -77,6 +77,17 @@ spec:
           root_url: "https://grafana.mcarcoba.com/"
           serve_from_sub_path: true
           enable_gzip: true
+        auth.github:
+          enabled: true
+          allow_sign_up: false
+          client_id: "${OAUTH_CLIENT_ID}"
+          client_secret: "${OAUTH_CLIENT_SECRET}"
+          scopes: "user:email,read:org"
+          auth_url: "https://github.com/login/oauth/authorize"
+          token_url: "https://github.com/login/oauth/access_token"
+          api_url: "https://api.github.com/user"
+          team_ids: ""
+          allowed_organizations: "mcarcobaOrg"
 #        auth.google:
 #          enabled: true
 #          name: OAuthProvider
@@ -91,15 +102,3 @@ spec:
 #          api_url: "https://www.googleapis.com/oauth2/v1/userinfo"
 #          allowed_domains:
 #            - grafana.mcarcoba.com
-        auth.google:
-          auth.github:
-            enabled: true
-            allow_sign_up: false
-            client_id: "${OAUTH_CLIENT_ID}"
-            client_secret: "${OAUTH_CLIENT_SECRET}"
-            scopes: "user:email,read:org"
-            auth_url: "https://github.com/login/oauth/authorize"
-            token_url: "https://github.com/login/oauth/access_token"
-            api_url: "https://api.github.com/user"
-            team_ids: ""
-            allowed_organizations: "mcarcobaOrg"
