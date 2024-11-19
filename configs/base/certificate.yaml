@@ -12,7 +12,6 @@ spec:
   dnsNames:
     - mcarcoba.com
     - grafana.mcarcoba.com
-    - "*.mcarcoba.com"
   isCA: false
   usages:
     - digital signature
