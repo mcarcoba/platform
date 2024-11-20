@@ -76,5 +76,5 @@ metadata:
   name: mcarcoba-ca-issuer
 spec:
   ca:
-    secretName: mcarcoba-ca-cert-secret
+    secretName: mcarcoba-ca-cert
 
