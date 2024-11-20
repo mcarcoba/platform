@@ -1,18 +1,53 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: mcarcoba-com-cert
+  name: mcarcoba-ca-cert
   namespace: cert-manager
 spec:
-  secretName: mcarcoba-com-cert-secret
+  secretName: mcarcoba-ca-cert-secret
+  isCA: true
+  issuerRef:
+    name: selfsigned
+    kind: ClusterIssuer
+  commonName: mcarcoba.com
+  usages:
+    - cert sign
+    - crl sign
+    - digital signature
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mcarcoba-end-cert
+  namespace: cert-manager
+spec:
+  secretName: mcarcoba-end-cert-secret
   issuerRef:
     name: cloudflare-prod
     kind: ClusterIssuer
   commonName: mcarcoba.com
   dnsNames:
     - mcarcoba.com
-    - grafana.mcarcoba.com
+    - "*.mcarcoba.com"
   isCA: false
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: internal-service-cert
+  namespace: cert-manager
+spec:
+  secretName: internal-service-cert-secret
+  issuerRef:
+    name: mcarcoba-internal-ca
+    kind: ClusterIssuer
+  commonName: mcarcoba.com
+  dnsNames:
+    - grafana.mcarcoba.com
   usages:
     - digital signature
     - key encipherment

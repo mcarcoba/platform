@@ -43,17 +43,6 @@ spec:
     grafana:
       defaultDashboardsEnabled: false
       adminPassword: "1Novatillo6!"
-#      env:
-#        OAUTH_CLIENT_ID:
-#          valueFrom:
-#            secretKeyRef:
-#              name: grafana-oauth-secret
-#              key: client_id
-#        OAUTH_CLIENT_SECRET:
-#            valueFrom:
-#              secretKeyRef:
-#                name: grafana-oauth-secret
-#                key: client_secret
       assertNoLeakedSecrets: false # TODO remove
       ingress:
         enabled: true
@@ -61,7 +50,7 @@ spec:
         annotations:
           kubernetes.io/ingress.class: traefik
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          cert-manager.io/cluster-issuer: cloudflare-prod
+          cert-manager.io/cluster-issuer: mcarcoba-ca-issuer
 #          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd"
           traefik.ingress.kubernetes.io/router.tls: "true"
         hosts:
@@ -69,7 +58,7 @@ spec:
         paths:
           - /
         tls:
-          - secretName: mcarcoba-com-cert
+          - secretName: internal-service-cert-secret
             hosts:
               - grafana.mcarcoba.com
       grafana.ini:
