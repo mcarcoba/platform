@@ -59,6 +59,7 @@ spec:
           - /
         tls:
           - secretName: internal-service-cert-secret
+            namespace: cert-manager
             hosts:
               - grafana.mcarcoba.com
       grafana.ini:
