@@ -43,7 +43,7 @@ metadata:
 spec:
   secretName: internal-service-cert-secret
   issuerRef:
-    name: mcarcoba-internal-ca
+    name: mcarcoba-ca-issuer
     kind: ClusterIssuer
   commonName: mcarcoba.com
   dnsNames:
