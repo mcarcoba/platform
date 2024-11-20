@@ -34,7 +34,7 @@ spec:
         resources:
           requests:
             cpu: 200m
-            memory: 200Mi
+            memory: 150Mi
         podMonitorNamespaceSelector: { }
         podMonitorSelector:
           matchLabels:
