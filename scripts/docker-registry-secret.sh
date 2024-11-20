@@ -2,7 +2,7 @@
 source ./env.sh
 
 # Check if the necessary environment variables are loaded
-if [ -z "$DOCKER_REGISTRY_SERVER" ] || [ -z "$DOCKER_USERNAME" ] || [ -z "$DOCKER_PASSWORD" ] || [ -z "$DOCKER_EMAIL" ] || [ -z "$SECRET_NAME" ]; then
+if [ -z "$DOCKER_REGISTRY_SERVER" ] || [ -z "$DOCKER_USERNAME" ] || [ -z "$DOCKER_PASSWORD" ] || [ -z "$DOCKER_EMAIL" ] ; then
   echo "Error: Some required environment variables are missing."
   exit 1
 fi
