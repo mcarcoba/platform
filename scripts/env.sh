@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if the config file exists
-if [ ! -f "./config.env" ]; then
+if [ ! -f "./.env" ]; then
   echo "Error: config.env file not found in the current directory."
   exit 1
 fi
