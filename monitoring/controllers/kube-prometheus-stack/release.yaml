@@ -4,7 +4,7 @@ metadata:
   name: kube-prometheus-stack
   namespace: monitoring
 spec:
-  interval: 1m
+  interval: 5m
   chartRef:
     kind: OCIRepository
     name: kube-prometheus-stack
