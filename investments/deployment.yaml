@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pickle-rick-investments
+  labels:
+    app: pickle-rick-investments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pickle-rick-investments
+  template:
+    metadata:
+      labels:
+        app: pickle-rick-investments
+    spec:
+      containers:
+        - name: pickle-rick-investments
+          image: drizzt92/pickle-rick-investments:latest
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "100m"
+            requests:
+              memory: "128Mi"
+              cpu: "50m"
