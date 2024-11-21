@@ -19,7 +19,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: mcarcoba-end-cert
-  namespace: monitoring
+  namespace: monitoring # TODO
 spec:
   secretName: mcarcoba-end-cert-secret
   issuerRef:
