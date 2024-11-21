@@ -58,7 +58,7 @@ spec:
         paths:
           - /
         tls:
-          - secretName: internal-service-cert-secret
+          - secretName: mcarcoba-end-cert-secret
             namespace: cert-manager
             hosts:
               - grafana.mcarcoba.com
