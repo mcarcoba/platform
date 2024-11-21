@@ -1,0 +1,36 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: investments
+  namespace: investments
+spec:
+  dependsOn:
+    - name: base
+  interval: 1m
+  retryInterval: 2m
+  timeout: 10m
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./investments
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: base-config
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: base
+  interval: 1m
+  retryInterval: 2m
+  timeout: 10m
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./configs/base
