@@ -24,7 +24,7 @@ metadata:
   namespace: investments
 spec:
   dependsOn:
-    - name: investments-config
+    - name: investments
   interval: 1m
   retryInterval: 2m
   timeout: 10m
