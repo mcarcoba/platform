@@ -52,6 +52,10 @@ spec:
       defaultDashboardsEnabled: false
       adminPassword: "1Novatillo6!"
       assertNoLeakedSecrets: false # TODO remove
+      rbac:
+        create: true
+        serviceAccount:
+          create: true
       ingress:
         enabled: true
         ingressClassName: traefik
@@ -71,6 +75,9 @@ spec:
             hosts:
               - grafana.mcarcoba.com
       grafana.ini:
+        dashboards:
+          default:
+            disableDeletion: true
         server:
           domain: grafana.mcarcoba.com
           root_url: "https://grafana.mcarcoba.com/"
