@@ -15,7 +15,7 @@ metadata:
   namespace: default
 spec:
   forwardAuth:
-    address: https://oauth2.mcarcoba.com
+    address: https://auth.mcarcoba.com
     trustForwardHeader: true
     authResponseHeaders:
       - X-Auth-User

@@ -55,7 +55,7 @@ spec:
         ingressClassName: traefik
         annotations:
           kubernetes.io/ingress.class: traefik
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+#          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           cert-manager.io/cluster-issuer: cloudflare-prod
           traefik.ingress.kubernetes.io/router.middlewares: "google-oidc-auth@kubernetescrd"
           traefik.ingress.kubernetes.io/router.tls: "true"
