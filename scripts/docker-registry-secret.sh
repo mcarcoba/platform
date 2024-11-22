@@ -13,7 +13,7 @@ kubectl create secret docker-registry dockerhub-registry \
   --docker-server=$DOCKER_REGISTRY_SERVER \
   --docker-username=$DOCKER_USERNAME \
   --docker-password=$DOCKER_PASSWORD \
-  --docker-email=$DOCKER_EMAIL
+  --docker-email=$DOCKER_EMAIL \
   --namespace investments
 
 echo "Secret dockerhub-registry created in the namespace default."
