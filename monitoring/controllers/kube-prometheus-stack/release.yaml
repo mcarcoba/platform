@@ -101,28 +101,3 @@ spec:
           root_url: "https://grafana.mcarcoba.com/"
           serve_from_sub_path: true
           enable_gzip: true
-#        auth.github:
-#          enabled: true
-#          allow_sign_up: false
-#          client_id: "$__env{OAUTH_CLIENT_ID}"
-#          client_secret: "$__env{OAUTH_CLIENT_SECRET}"
-#          scopes: "user:email,read:org"
-#          auth_url: "https://github.com/login/oauth/authorize"
-#          token_url: "https://github.com/login/oauth/access_token"
-#          api_url: "https://api.github.com/user"
-#          allowed_domains: grafana.mcarcoba.com
-#          allowed_organizations: "mcarcobaOrg"
-#        auth.google:
-#          enabled: true
-#          name: OAuthProvider
-#          allow_sign_up: false
-#          client_id: "${OAUTH_CLIENT_ID}"
-#          client_secret: "${OAUTH_CLIENT_SECRET}"
-#          scopes:
-#            - https://www.googleapis.com/auth/userinfo.profile
-#            - https://www.googleapis.com/auth/userinfo.email
-#          auth_url: "https://accounts.google.com/o/oauth2/auth"
-#          token_url: "https://oauth2.googleapis.com/token"
-#          api_url: "https://www.googleapis.com/oauth2/v1/userinfo"
-#          allowed_domains:
-#            - grafana.mcarcoba.com
