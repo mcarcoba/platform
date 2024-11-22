@@ -64,7 +64,7 @@ spec:
         paths:
           - /
         tls:
-          - secretName: mcarcoba-end-cert
+          - secretName: mcarcoba-end-cert-secret
             hosts:
               - prometheus.mcarcoba.com
     grafana:
@@ -89,7 +89,7 @@ spec:
         paths:
           - /
         tls:
-          - secretName: mcarcoba-end-cert
+          - secretName: mcarcoba-end-cert-secret
             hosts:
               - grafana.mcarcoba.com
       grafana.ini:
