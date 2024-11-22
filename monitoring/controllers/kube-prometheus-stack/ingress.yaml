@@ -13,7 +13,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`grafana.example.com`)
+    - match: Host(`grafana.mcarcoba.com`)
       kind: Rule
       services:
         - name: kube-prometheus-stack-grafana
