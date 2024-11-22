@@ -30,6 +30,8 @@ spec:
 
     prometheus:
       prometheusSpec:
+        auth:
+          prometheusAdminPassword: "1Novatillo6!"
         storageSpec:
           volumeClaimTemplate:
             spec:
