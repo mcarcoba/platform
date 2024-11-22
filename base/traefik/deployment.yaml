@@ -20,7 +20,7 @@ spec:
             - --provider=google
             - --client-id=$(GOOGLE_CLIENT_ID)
             - --client-secret=$(GOOGLE_CLIENT_SECRET)
-            - --cookie-secret=$(COOKIE_SECRET)
+            - --cookie-secret=IQotpjvebuf8R22GxEHAiv4yWRBCuZKMfR3u5h/M7nM=
             - --cookie-secure=true
             - --email-domain=mcarcoba.com
             - --redirect-url=https://mcarcoba.com/oauth2/callback
