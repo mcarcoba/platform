@@ -50,23 +50,23 @@ spec:
         podMonitorSelector:
           matchLabels:
             app.kubernetes.io/component: monitoring
-      ingress:
-        enabled: true
-        ingressClassName: traefik
-        annotations:
-          kubernetes.io/ingress.class: traefik
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          cert-manager.io/cluster-issuer: cloudflare-prod
-          #          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd"
-          traefik.ingress.kubernetes.io/router.tls: "true"
-        hosts:
-          - prometheus.mcarcoba.com
-        paths:
-          - /
-        tls:
-          - secretName: mcarcoba-end-cert
-            hosts:
-              - prometheus.mcarcoba.com
+#      ingress:
+#        enabled: true
+#        ingressClassName: traefik
+#        annotations:
+#          kubernetes.io/ingress.class: traefik
+#          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+#          cert-manager.io/cluster-issuer: cloudflare-prod
+#          #          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd"
+#          traefik.ingress.kubernetes.io/router.tls: "true"
+#        hosts:
+#          - prometheus.mcarcoba.com
+#        paths:
+#          - /
+#        tls:
+#          - secretName: mcarcoba-end-cert
+#            hosts:
+#              - prometheus.mcarcoba.com
     grafana:
       defaultDashboardsEnabled: false
       adminPassword: "1Novatillo6!"
