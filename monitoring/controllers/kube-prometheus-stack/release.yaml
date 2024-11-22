@@ -75,23 +75,23 @@ spec:
         create: true
         serviceAccount:
           create: true
-      ingress:
-        enabled: true
-        ingressClassName: traefik
-        annotations:
-          kubernetes.io/ingress.class: traefik
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          cert-manager.io/cluster-issuer: cloudflare-prod
-          traefik.ingress.kubernetes.io/router.middlewares: "google-oidc-auth@kubernetescrd"
-          traefik.ingress.kubernetes.io/router.tls: "true"
-        hosts:
-          - grafana.mcarcoba.com
-        paths:
-          - /
-        tls:
-          - secretName: mcarcoba-end-cert
-            hosts:
-              - grafana.mcarcoba.com
+#      ingress:
+#        enabled: true
+#        ingressClassName: traefik
+#        annotations:
+#          kubernetes.io/ingress.class: traefik
+#          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+#          cert-manager.io/cluster-issuer: cloudflare-prod
+#          traefik.ingress.kubernetes.io/router.middlewares: "google-oidc-auth@kubernetescrd"
+#          traefik.ingress.kubernetes.io/router.tls: "true"
+#        hosts:
+#          - grafana.mcarcoba.com
+#        paths:
+#          - /
+#        tls:
+#          - secretName: mcarcoba-end-cert
+#            hosts:
+#              - grafana.mcarcoba.com
       grafana.ini:
         dashboards:
           default:
