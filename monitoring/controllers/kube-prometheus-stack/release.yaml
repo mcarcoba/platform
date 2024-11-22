@@ -57,7 +57,7 @@ spec:
           kubernetes.io/ingress.class: traefik
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           cert-manager.io/cluster-issuer: cloudflare-prod
-          #          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd"
+          traefik.ingress.kubernetes.io/router.middlewares: "redirect-to-https@kubernetescrd google-oidc-auth@kubernetescrd"
           traefik.ingress.kubernetes.io/router.tls: "true"
         hosts:
           - prometheus.mcarcoba.com
