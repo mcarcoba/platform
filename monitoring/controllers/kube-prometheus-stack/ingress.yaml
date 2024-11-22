@@ -19,6 +19,4 @@ spec:
         - name: kube-prometheus-stack-grafana
           port: 80
   tls:
-    - secretName: mcarcoba-end-cert
-      hosts:
-        - grafana.mcarcoba.com
+    secretName: mcarcoba-end-cert
