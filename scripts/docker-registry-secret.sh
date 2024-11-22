@@ -14,6 +14,7 @@ kubectl create secret docker-registry dockerhub-registry \
   --docker-username=$DOCKER_USERNAME \
   --docker-password=$DOCKER_PASSWORD \
   --docker-email=$DOCKER_EMAIL
+  --namespace investments
 
 echo "Secret dockerhub-registry created in the namespace default."
 
@@ -21,9 +22,9 @@ echo "Secret dockerhub-registry created in the namespace default."
 read -p "Do you want to set this secret as the default ? (y/n): " SET_DEFAULT
 if [[ "$SET_DEFAULT" == "y" ]]; then
   echo "Setting the secret as default for the namespace default..."
-  kubectl patch serviceaccount default \
+  kubectl patch serviceaccount investments \
     -p "{\"imagePullSecrets\": [{\"name\": \"dockerhub-registry\"}]}" \
-    --namespace default
+    --namespace investments
   echo "Default configuration completed."
 else
   echo "Exiting without setting as default."

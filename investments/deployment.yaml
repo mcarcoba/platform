@@ -14,6 +14,8 @@ spec:
       labels:
         app: pickle-rick-investments
     spec:
+      imagePullSecrets:
+        - name: dockerhub-registry
       containers:
         - name: pickle-rick-investments
           image: drizzt92/pickle-rick-investments:latest
