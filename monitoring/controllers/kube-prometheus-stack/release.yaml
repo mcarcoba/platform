@@ -65,7 +65,6 @@ spec:
           - /
         tls:
           - secretName: mcarcoba-end-cert
-            namespace: cert-manager
             hosts:
               - prometheus.mcarcoba.com
     grafana:
@@ -91,7 +90,6 @@ spec:
           - /
         tls:
           - secretName: mcarcoba-end-cert
-            namespace: cert-manager
             hosts:
               - grafana.mcarcoba.com
       grafana.ini:
