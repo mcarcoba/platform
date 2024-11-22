@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - cluster-issuer.yaml
   - certificate.yaml
-  - traefik/middleware.yaml
+#  - traefik/middleware.yaml

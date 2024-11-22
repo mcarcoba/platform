@@ -1,0 +1,22 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-to-https
+  namespace: monitoring
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: google-oidc-auth
+  namespace: monitoring
+spec:
+  forwardAuth:
+    address: https://oauth2.mcarcoba.com
+    trustForwardHeader: true
+    authResponseHeaders:
+      - X-Auth-User
+      - X-Auth-Email
