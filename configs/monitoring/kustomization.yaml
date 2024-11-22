@@ -9,7 +9,6 @@ configMapGenerator:
       - dashboards/control-plane.json
       - dashboards/cluster.json
       - dashboards/logs.json
-      - dashboards/k3s.json
       - dashboards/k8s-coredns.json
     options:
       labels:
