@@ -14,6 +14,10 @@ kube-state-metrics:
           - notification.toolkit.fluxcd.io
           - image.toolkit.fluxcd.io
         resources:
+          - pods/log
+          - pods
+          - events
+          - deployments
           - gitrepositories
           - buckets
           - helmrepositories
@@ -27,7 +31,7 @@ kube-state-metrics:
           - imagerepositories
           - imagepolicies
           - imageupdateautomations
-        verbs: [ "list", "watch" ]
+        verbs: [ "get", "list", "watch" ]
   customResourceState:
     enabled: true
     config:
