@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: keycloak
         namespace: system
-      version: "22.0.1"
+      version: "26.0.6"
   values:
     replicaCount: 1
     resources:
