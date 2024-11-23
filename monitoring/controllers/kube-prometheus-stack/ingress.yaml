@@ -7,7 +7,6 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     cert-manager.io/cluster-issuer: cloudflare-prod
-    traefik.ingress.kubernetes.io/router.middlewares: google-oidc-auth@kubernetescrd
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   entryPoints:
@@ -18,5 +17,8 @@ spec:
       services:
         - name: kube-prometheus-stack-grafana
           port: 80
+#      middlewares:
+#        - name: keycloak-auth
+#          namespace: system
   tls:
     secretName: mcarcoba-end-cert

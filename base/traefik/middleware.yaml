@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: keycloak-auth
+  namespace: traefik
+spec:
+  forwardAuth:
+    address: "http://auth.mcarcoba.com/auth/realms/mcarcoba/protocol/openid-connect/auth"
+    trustForwardHeader: true
+    authResponseHeaders:
+      - X-Auth-User
+      - X-Auth-Email
