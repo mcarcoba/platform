@@ -4,5 +4,5 @@ metadata:
   name: keycloak
   namespace: system
 spec:
-  url: https://codecentric.github.io/helm-charts
+  url: https://charts.bitnami.com/bitnami
   interval: 10m
