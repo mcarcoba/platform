@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: keycloak
+  name: bitname
   namespace: system
 spec:
   url: https://charts.bitnami.com/bitnami

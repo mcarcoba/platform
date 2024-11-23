@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: system
 resources:
   - namespace.yaml
-  - release.yaml
   - repository.yaml
+  - release.yaml
+  - keycloack.yaml
