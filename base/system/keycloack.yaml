@@ -1,25 +1,25 @@
-apiVersion: keycloak.org/v1alpha1
-kind: Keycloak
-metadata:
-  name: keycloak
-  namespace: keycloak
-spec:
-  instances: 1
-  externalAccess:
-    enabled: true
-  database:
-    host: postgresql.keycloak.svc.cluster.local
-    username: keycloak
-    passwordSecret:
-      name: keycloak-db-secret
-      key: password
-    databaseName: keycloakdb
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: keycloak-db-secret
-  namespace: keycloak
-type: Opaque
-data:
-  password: a2V5Y2xvYWs= # Base64 for "keycloak"
+#apiVersion: keycloak.org/v1alpha1
+#kind: Keycloak
+#metadata:
+#  name: keycloak
+#  namespace: keycloak
+#spec:
+#  instances: 1
+#  externalAccess:
+#    enabled: true
+#  database:
+#    host: postgresql.keycloak.svc.cluster.local
+#    username: keycloak
+#    passwordSecret:
+#      name: keycloak-db-secret
+#      key: password
+#    databaseName: keycloakdb
+#---
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: keycloak-db-secret
+#  namespace: keycloak
+#type: Opaque
+#data:
+#  password: a2V5Y2xvYWs= # Base64 for "keycloak"
