@@ -35,7 +35,7 @@ spec:
       chart: keycloak
       sourceRef:
         kind: HelmRepository
-        name: keycloak
+        name: bitnami
         namespace: system
       version: "26.0.6"
   values:
