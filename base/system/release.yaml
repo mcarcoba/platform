@@ -37,7 +37,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: system
-      version: "26.0.6"
+      version: "26.0.5"
   values:
     replicaCount: 1
     resources:
