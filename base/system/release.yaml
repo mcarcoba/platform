@@ -38,14 +38,17 @@ spec:
         name: bitnami
         namespace: system
   values:
+    global:
+      postgresql:
+        enabled: false
     replicaCount: 1
     resources:
       requests:
-        memory: "1Gi"
-        cpu: "500m"
+        memory: "512Mi"
+        cpu: "250m"
       limits:
-        memory: "1Gi"
-        cpu: "500m"
+        memory: "512Mi"
+        cpu: "250m"
     persistence:
       enabled: true
       size: 10Gi
