@@ -28,16 +28,15 @@ metadata:
   name: keycloak
   namespace: system
 spec:
-  releaseName: keycloak
   interval: 1m
   chart:
     spec:
       chart: keycloak
+      version: 24.2.2
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: system
-      version: "24.2.2"
   values:
     replicaCount: 1
     resources:
