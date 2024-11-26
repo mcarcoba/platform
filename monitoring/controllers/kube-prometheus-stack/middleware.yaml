@@ -8,15 +8,3 @@ spec:
     scheme: https
     permanent: true
 ---
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: google-oidc-auth
-  namespace: default
-spec:
-  forwardAuth:
-    address: https://auth.mcarcoba.com
-    trustForwardHeader: true
-    authResponseHeaders:
-      - X-Auth-User
-      - X-Auth-Email
