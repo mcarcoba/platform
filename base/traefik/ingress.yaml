@@ -18,4 +18,4 @@ spec:
         - name: oauth2-proxy
           port: 80
   tls:
-    secretName: mcarcoba-end-cert
+    secretName: mcarcoba-end-cert-secret
