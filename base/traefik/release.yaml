@@ -38,13 +38,13 @@ spec:
         - mcarcoba.com
       upstreams:
         - file://dev/null
-    ingress:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: "traefik"
-      hosts:
-        - auth.mcarcoba.com
-      tls:
-        - secretName: mcarcoba-end-cert
-          hosts:
-            - auth.mcarcoba.com
+#    ingress:
+#      enabled: true
+#      annotations:
+#        kubernetes.io/ingress.class: "traefik"
+#      hosts:
+#        - auth.mcarcoba.com
+#      tls:
+#        - secretName: mcarcoba-end-cert
+#          hosts:
+#            - auth.mcarcoba.com
