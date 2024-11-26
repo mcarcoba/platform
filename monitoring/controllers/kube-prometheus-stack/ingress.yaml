@@ -8,7 +8,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     cert-manager.io/cluster-issuer: cloudflare-prod
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: "traefik-oauth2"
+    traefik.ingress.kubernetes.io/router.middlewares: "traefik/oauth2"
 spec:
   entryPoints:
     - websecure
