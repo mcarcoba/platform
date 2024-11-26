@@ -17,6 +17,8 @@ spec:
   values:
     replicaCount: 1
     extraEnv:
+      - name: OAUTH2_PROXY_LOG_LEVEL
+        value: debug
       - name: OAUTH2_PROXY_CLIENT_ID
         valueFrom:
           secretKeyRef:
