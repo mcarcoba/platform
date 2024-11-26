@@ -45,6 +45,6 @@ spec:
       hosts:
         - auth.mcarcoba.com
       tls:
-        - secretName: oauth2-proxy-tls
+        - secretName: mcarcoba-end-cert
           hosts:
             - auth.mcarcoba.com
