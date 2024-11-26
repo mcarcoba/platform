@@ -15,7 +15,7 @@ spec:
     - match: Host(`auth.mcarcoba.com`)
       kind: Rule
       services:
-        - name: oauth-proxy
+        - name: oauth2-proxy
           port: 80
   tls:
     secretName: mcarcoba-end-cert

@@ -34,3 +34,23 @@ spec:
     - digital signature
     - key encipherment
     - server auth
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mcarcoba-end-cert
+  namespace: traefik
+spec:
+  secretName: mcarcoba-end-cert-secret
+  issuerRef:
+    name: cloudflare-prod
+    kind: ClusterIssuer
+  commonName: mcarcoba.com
+  dnsNames:
+    - mcarcoba.com
+    - "*.mcarcoba.com"
+  isCA: false
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
