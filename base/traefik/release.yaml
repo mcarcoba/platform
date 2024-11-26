@@ -4,8 +4,6 @@ metadata:
   name: oauth2-proxy
   namespace: traefik
 spec:
-  args:
-    - "--providers.kubernetescrd.allowcrossnamespace=true"
   releaseName: oauth2-proxy
   chart:
     spec:
