@@ -28,6 +28,7 @@ spec:
             name: google-oidc-secret
             key: client-secret
     config:
+      cookieDomain: mcarcoba.com
       cookieSecret: 2kz_tV5L9t9mRVo5Qd62NvgjGVqH86Ie0U5k7Z6R_aM=
       cookieSecure: true
       provider: google
