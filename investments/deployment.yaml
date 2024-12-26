@@ -19,6 +19,7 @@ spec:
       containers:
         - name: pickle-rick-investments
           image: drizzt92/pickle-rick-investments:latest
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "256Mi"
@@ -48,6 +49,7 @@ spec:
       containers:
         - name: pickle-rick-investments
           image: drizzt92/pickle-rick-investments:dev-latest
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "256Mi"
