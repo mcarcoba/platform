@@ -26,3 +26,32 @@ spec:
             requests:
               memory: "128Mi"
               cpu: "50m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pickle-rick-investments-dev
+  labels:
+    app: pickle-rick-investments-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pickle-rick-investments-dev
+  template:
+    metadata:
+      labels:
+        app: pickle-rick-investments-dev
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-registry
+      containers:
+        - name: pickle-rick-investments
+          image: drizzt92/pickle-rick-investments:dev-latest
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "100m"
+            requests:
+              memory: "128Mi"
+              cpu: "50m"
