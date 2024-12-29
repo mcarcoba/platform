@@ -9,8 +9,4 @@ data:
   GCP_PROJECT_ID: "pickle-rick-investments"
   PATH_DB: "backup.db"
   ALPACA_ENDPOINT: "https://paper-api.alpaca.markets"
-#  ALPACA_KEY: "PK9LJKVKQ0HIERT6ZW0R"
-#  ALPACA_SECRET: "pL1EnEsfAQyoS7llwGnqLIQdMCO7gI8YHpEYPche"
-#  TELEGRAM_BOT: "7610149438:AAGWnNGNFyn4gbLDRZVWzsAsbVehhtyzZIs"
   TELEGRAM_USERS: "272711169"
-#  GCP_CREDENTIALS_JSON: "{"type":"service_account","project_id":"pickle-rick-investments","private_key_id":"3"

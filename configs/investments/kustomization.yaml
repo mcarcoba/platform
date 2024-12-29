@@ -4,3 +4,4 @@ namespace: investments
 resources:
   - namespace.yaml
   - configmap.yaml
+  - secret.yaml
