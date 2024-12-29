@@ -96,11 +96,11 @@ spec:
                   name: pickle-rick-investments-conf
                   key: ALPACA_SECRET
             - name: TELEGRAM_BOT
-#              value: "7610149438:AAGWnNGNFyn4gbLDRZVWzsAsbVehhtyzZIs"
-              valueFrom:
-                secretKeyRef:
-                  name: pickle-rick-investments-conf
-                  key: TELEGRAM_BOT
+              value: "7610149438:AAGWnNGNFyn4gbLDRZVWzsAsbVehhtyzZIs"
+#              valueFrom:
+#                secretKeyRef:
+#                  name: pickle-rick-investments-conf
+#                  key: TELEGRAM_BOT
             - name: GCP_CREDENTIALS_JSON
               valueFrom:
                 secretKeyRef:
