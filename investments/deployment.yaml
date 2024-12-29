@@ -96,7 +96,7 @@ spec:
                   name: pickle-rick-investments-conf
                   key: ALPACA_SECRET
             - name: TELEGRAM_BOT
-              value: "pepe"
+              value: "7610149438:AAGWnNGNFyn4gbLDRZVWzsAsbVehhtyzZIs"
 #              valueFrom:
 #                secretKeyRef:
 #                  name: pickle-rick-investments-conf
