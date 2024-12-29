@@ -47,8 +47,11 @@ spec:
         - name: dockerhub-registry
       containers:
         - name: pickle-rick-investments
-          image: drizzt92/pickle-rick-investments:dev-latest
+          image: drizzt92/pickle-rick-investments:0.0.4
           imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: pickle-rick-investments
           resources:
             limits:
               memory: "256Mi"

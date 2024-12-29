@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: investments
 resources:
   - namespace.yaml
+  - configmap.yaml
