@@ -49,11 +49,62 @@ spec:
         - name: pickle-rick-investments
           image: drizzt92/pickle-rick-investments:0.0.4
           imagePullPolicy: Always
-          envFrom:
-            - configMapRef:
-                name: pickle-rick-investments
-            - secretRef:
-                name: pickle-rick-investments-conf
+          env:
+            - name: ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: ENVIRONMENT
+            - name: HTTP_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: HTTP_PORT
+            - name: GCP_BUCKET_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: GCP_BUCKET_NAME
+            - name: GCP_PROJECT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: GCP_PROJECT_ID
+            - name: PATH_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: PATH_DB
+            - name: ALPACA_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: ALPACA_ENDPOINT
+            - name: TELEGRAM_USERS
+              valueFrom:
+                configMapKeyRef:
+                  name: pickle-rick-investments
+                  key: TELEGRAM_USERS
+            - name: ALPACA_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pickle-rick-investments-conf
+                  key: ALPACA_KEY
+            - name: ALPACA_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: pickle-rick-investments-conf
+                  key: ALPACA_SECRET
+            - name: TELEGRAM_BOT
+              valueFrom:
+                secretKeyRef:
+                  name: pickle-rick-investments-conf
+                  key: TELEGRAM_BOT
+            - name: GCP_CREDENTIALS_JSON
+              valueFrom:
+                secretKeyRef:
+                  name: pickle-rick-investments-conf
+                  key: GCP_CREDENTIALS_JSON
           resources:
             limits:
               memory: "256Mi"
