@@ -47,7 +47,7 @@ spec:
         - name: dockerhub-registry
       containers:
         - name: pickle-rick-investments
-          image: drizzt92/pickle-rick-investments:0.0.4
+          image: drizzt92/pickle-rick-investments:0.0.5-wip-dev
           imagePullPolicy: Always
           env:
             - name: ENVIRONMENT
